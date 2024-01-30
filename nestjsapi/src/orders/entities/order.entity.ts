@@ -26,7 +26,7 @@ export class Order {
   total: number;
 
   @Column()
-  cliente_id: number;
+  client_id: number;
 
   @Column()
   status: OrderStatus = OrderStatus.PENDING;
