@@ -14,3 +14,13 @@ services:
       - 3306:3306
     volumes:
       - .docker/mysql:/var/lib/mysql
+
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+    ports:
+      - 15672:15672
+      - 5672:5672

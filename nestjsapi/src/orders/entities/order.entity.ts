@@ -40,7 +40,7 @@ export class Order {
   static create(input: CreateOrderCommand): Order {
     const order = new Order();
 
-    order.cliente_id = input.client_id;
+    order.client_id = input.client_id;
 
     order.items = input.items.map((item) => {
       const orderItem = new OrderItem();
