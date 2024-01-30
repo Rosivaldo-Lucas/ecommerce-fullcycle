@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  nestjsapi:
+    image: mysql:8.0.30-debian
+    container_name: nestjsapi
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: nestjsapi
+      MYSQL_USER: catalog
+      MYSQL_PASSWORD: catalog
+    ports:
+      - 3306:3306
+    volumes:
+      - .docker/mysql:/var/lib/mysql
