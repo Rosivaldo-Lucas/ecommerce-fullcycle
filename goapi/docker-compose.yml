@@ -2,12 +2,12 @@ version: '3'
 
 services:
   mysql:
-    image: mysql:latest
+    image: rosivaldolucas/goapi-mysql
     container_name: goapi-mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: catalog
+      MYSQL_DATABASE: catalog-api
       MYSQL_USER: catalog
       MYSQL_PASSWORD: catalog
     ports:
